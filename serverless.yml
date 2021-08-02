@@ -1,0 +1,11 @@
+service:
+  name: ignitetodos
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
