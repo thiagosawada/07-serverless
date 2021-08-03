@@ -33,6 +33,13 @@ functions:
           path: /todo/{userid}
           method: POST
           cors: true
+  listToDos:
+    handler: src/functions/listToDos.handle
+    events:
+      - http:
+          path: /todo/{userid}
+          method: GET
+          cors: true
 
 resources:
   Resources:
