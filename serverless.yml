@@ -25,6 +25,15 @@ provider:
   runtime: nodejs14.x
   region: sa-east-1
 
+functions:
+  createToDo:
+    handler: src/functions/createToDo.handle
+    events:
+      - http:
+          path: /todo/{userid}
+          method: POST
+          cors: true
+
 resources:
   Resources:
     dbToDos:
